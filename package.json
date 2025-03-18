@@ -1,0 +1,53 @@
+{
+  "name": "ERP-pulsar",
+  "version": "1.0.0",
+  "description": "ERP para la empresa Pulsar",
+  "main": "./out/main/index.js",
+  "author": "Benjamin Carreón y Miguel Calderón",
+  "homepage": "https://erp-pulsar.vercel.app/login",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint --cache .",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:linux": "npm run build && electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.tuapp.id",
+    "productName": "ERP-Pulsar",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "./resources/icon.png"
+    },
+    "linux": {
+      "icon": "./resources/icon.png"
+    }
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.1",
+    "@electron-toolkit/utils": "^4.0.0"
+  },
+  "devDependencies": {
+    "@electron-toolkit/eslint-config": "^2.0.0",
+    "@electron-toolkit/eslint-config-prettier": "^3.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^3.0.0",
+    "eslint": "^9.20.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "prettier": "^3.5.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^6.1.0"
+  }
+}
